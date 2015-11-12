@@ -1,4 +1,4 @@
-FROM orgsync/java8
+FROM quay.io/orgsync/java:1.8
 
 ENV SCALA_VERSION 2.10
 ENV KAFKA_VERSION 0.8.2.1
