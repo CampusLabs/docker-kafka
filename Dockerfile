@@ -1,7 +1,7 @@
 FROM quay.io/orgsync/java:1.8
 
-ENV SCALA_VERSION 2.10
-ENV KAFKA_VERSION 0.8.2.1
+ENV SCALA_VERSION 2.11
+ENV KAFKA_VERSION 0.9.0.0
 
 WORKDIR /kafka
 
@@ -14,4 +14,4 @@ ENV PATH=$PATH:/kafka/bin
 
 VOLUME /kafka/logs
 EXPOSE 9092
-CMD kafka-server-start.sh config/server.properties
+CMD exec kafka-server-start.sh config/server.properties
