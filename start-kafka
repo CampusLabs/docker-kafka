@@ -1,0 +1,8 @@
+#! /bin/bash -e
+
+sed -i -- "s|BROKER_ID|$BROKER_ID|g" $KAFKA_CONFIG
+sed -i -- "s|BROKER_PORT|$BROKER_PORT|g" $KAFKA_CONFIG
+sed -i -- "s|ADVERTISED_HOST_NAME|$HOSTNAME|g" $KAFKA_CONFIG
+sed -i -- "s|ADVERTISED_PORT|$ADVERTISED_PORT|g" $KAFKA_CONFIG
+
+exec kafka-server-start.sh $KAFKA_CONFIG
