@@ -1,7 +1,7 @@
 FROM quay.io/orgsync/java:1.8
 
 ENV SCALA_VERSION 2.11
-ENV KAFKA_VERSION 0.9.0.0
+ENV KAFKA_VERSION 0.9.0.1
 
 WORKDIR /kafka
 
